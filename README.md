@@ -1,24 +1,25 @@
 # Mubende Engineering Outreach (MEO) Platform
 
-## Technical Architecture & Engineering Specification
+## Technical Architecture & Multi-Page Specification
 
-A high-performance, interactive outreach platform engineered for community-focused construction and hydraulic infrastructure initiatives in the Mubende and Central Uganda regions.
+A high-fidelity, interactive engineering portfolio and outreach platform. This project implements a sophisticated multi-page architecture optimized for technical documentation and regional infrastructure visibility in Mubende, Central Uganda.
 
-### Technical Stack
-- **Structural Layer**: Semantic HTML5 with an emphasis on document object model (DOM) accessibility and search engine optimization (SEO).
-- **Presentation Layer**: CSS3 utilizing an Atomic Design System approach. Features include:
-  - **CSS Custom Properties**: Centralized state management for design tokens (color scales, typography, spatial units).
-  - **Grid & Flexbox Orchestration**: Dynamic, responsive layout engines for multi-viewport compatibility.
-  - **Hardware-Accelerated Transitions**: Optimizing render cycles for fluid micro-interactions.
-- **Behavioral Layer**: Vanilla JavaScript (ECMAScript 2022+) focusing on non-blocking execution.
-  - **Intersection Observer API**: Synchronized asynchronous reveal animations for optimized performance.
-  - **Event Delegation**: Efficient handling of DOM interactions via high-level event listeners.
-  - **Modular Architecture**: Functional decomposition of UI behavioral logic.
+### Architectural Core
+- **Theme Orchestration System**: A centralized state manager utilizing CSS Custom Properties and `localStorage` to handle seamless theme transitions (Light/Dark modes).
+- **Masonry Layout Engine**: The Projects module leverages a multi-column CSS Grid architecture to simulate a Pinterest-style masonry layout, optimizing visual density for technical milestones.
+- **Semantic Routing**: A static multi-page structure (`index`, `mission`, `specializations`, `projects`, `vision`) utilizing semantic HTML5 for deep indexing and accessibility.
 
-### Performance & Optimization
-- **Critical Path Optimization**: Minimal external dependencies to reduce HTTP overhead and Time to Interactive (TTI).
-- **Responsive Fluidity**: Fluid typography and spatial scaling using `clamp()` and relative units.
-- **Async Execution**: Non-blocking script loading to ensure prioritization of the Critical Rendering Path (CRP).
+### Technical Stack & Methodologies
+- **Presentation Layer**: CSS3 Atomic Design with hardware-accelerated transitions.
+  - **Dynamic Viewport Scaling**: Leveraging `clamp()` and relative units for fluid responsiveness.
+  - **Grid Orchestration**: Complex layout management for heterogeneous content blocks.
+- **Behavioral Layer**: Vanilla ECMAScript 2022+ Logic.
+  - **Intersection Observer API**: Synchronized asynchronous reveal animations to maintain a lean main execution thread.
+  - **State Persistence**: Non-volatile storage of user UI preferences.
+- **Content Strategy**: High-density technical wordage focusing on structural load-bearing analysis, hydraulic fluid dynamics, and regional logistics optimization.
 
-### Regional Outreach Integration
-The platform implements a modular content strategy targeting the Mubende District and Central Uganda logistics corridors, facilitating technical engagement and infrastructure consultancy outreach.
+### Engineering Excellence
+- **Critical Path Optimization**: Minimal dependency overhead to ensure sub-second Time to Interactive (TTI).
+- **Standards Compliance**: Architectural alignment with ISO engineering documentation protocols and modern web standards.
+- **Modular Documentation**: Functional decomposition of technical specializations and regional vision modules.
+

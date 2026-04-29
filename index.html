@@ -1,37 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mubende Engineering Outreach - Providing world-class construction and plumbing engineering services to community projects in Central Uganda.">
-    <title>Mubende Engineering Outreach | Community Engineering Excellence</title>
+    <meta name="description" content="Mubende Engineering Outreach - Technical infrastructure and community development in Central Uganda.">
+    <title>MEO | Engineering for Community Development</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="site-header">
         <nav class="nav-container">
-            <div class="logo">MEO<span>.</span></div>
+            <a href="index.html" class="logo">MEO<span>.</span></a>
             <ul class="nav-links">
-                <li><a href="#about">Mission</a></li>
-                <li><a href="#services">Specializations</a></li>
-                <li><a href="#impact">Regional Impact</a></li>
-                <li><a href="#contact" class="btn-primary">Connect</a></li>
+                <li><a href="mission.html">Mission</a></li>
+                <li><a href="specializations.html">Specializations</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="vision.html">Vision</a></li>
             </ul>
-            <button class="mobile-toggle" aria-label="Toggle Navigation">
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                </button>
+            </div>
         </nav>
     </header>
 
     <main>
         <section class="hero-module">
             <div class="hero-content">
-                <h1 class="reveal-text">Engineering a Sustainable <span>Future for Mubende.</span></h1>
-                <p class="fade-in">Precision plumbing and structural engineering solutions dedicated to community development across Central Uganda.</p>
+                <h1 class="reveal-text">Structural Integrity. <span>Community Impact.</span></h1>
+                <p class="fade-in">Dedicated engineering consultancy specializing in hydraulic systems and civil construction for the Mubende District.</p>
                 <div class="hero-actions">
-                    <a href="#services" class="btn-secondary">Technical Expertise</a>
-                    <a href="#impact" class="btn-outline">Regional Reach</a>
+                    <a href="projects.html" class="btn-secondary">View Projects</a>
+                    <a href="mission.html" class="btn-outline">Our Philosophy</a>
                 </div>
             </div>
             <div class="hero-visual">
@@ -39,62 +40,11 @@
             </div>
         </section>
 
-        <section id="services" class="service-matrix">
-            <div class="section-header">
-                <h2 class="section-title">Core Engineering Competencies</h2>
-                <p class="section-subtitle">High-fidelity technical execution for public infrastructure.</p>
-            </div>
-            <div class="matrix-grid">
-                <article class="matrix-item animate-on-scroll">
-                    <div class="item-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                        </svg>
-                    </div>
-                    <h3>Structural Engineering</h3>
-                    <p>Advanced load-bearing analysis and construction management for durable community housing and facilities.</p>
-                </article>
-                <article class="matrix-item animate-on-scroll">
-                    <div class="item-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/>
-                            <path d="M12 7v5l3 3"/>
-                        </svg>
-                    </div>
-                    <h3>Hydraulic Systems</h3>
-                    <p>Sophisticated plumbing infrastructure design, focusing on sustainable water management and sanitation in Mubende.</p>
-                </article>
-                <article class="matrix-item animate-on-scroll">
-                    <div class="item-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-                        </svg>
-                    </div>
-                    <h3>Technical Consultancy</h3>
-                    <p>Providing expert engineering advisory services for regional development projects and NGOs in Central Uganda.</p>
-                </article>
-            </div>
-        </section>
-
-        <section id="impact" class="regional-outreach">
-            <div class="outreach-container">
-                <div class="outreach-text animate-on-scroll">
-                    <h2>Mubende & Central Uganda Focus</h2>
-                    <p>Our initiatives are geographically concentrated in Mubende District and the broader Central Region, ensuring high-impact engineering solutions where they are most required.</p>
-                    <ul class="feature-list">
-                        <li>Community Water Projects</li>
-                        <li>Structural Safety Audits</li>
-                        <li>Technical Skill Transfer</li>
-                    </ul>
-                </div>
-                <div class="outreach-visual animate-on-scroll">
-                    <div class="blueprint-card">
-                        <div class="card-header">Regional Logistics Map</div>
-                        <div class="card-body">
-                            <div class="map-placeholder"></div>
-                        </div>
-                    </div>
-                </div>
+        <section class="content-section animate-on-scroll">
+            <h2>Technical Outreach in Central Uganda</h2>
+            <div class="content-body">
+                <p>Mubende Engineering Outreach (MEO) operates at the intersection of technical precision and social responsibility. Our objective is to bridge the infrastructure gap in Central Uganda through rigorous engineering standards and sustainable design methodologies.</p>
+                <p>From complex hydraulic network designs to structural load-bearing analysis for public facilities, our team ensures that every project meets international engineering benchmarks while remaining locally viable.</p>
             </div>
         </section>
     </main>
@@ -106,7 +56,7 @@
                 <p>Engineering for humanity.</p>
             </div>
             <div class="footer-meta">
-                <p>&copy; 2026 Mubende Engineering Outreach. All rights reserved.</p>
+                <p>&copy; 2026 Mubende Engineering Outreach. Technical solutions for a developing world.</p>
             </div>
         </div>
     </footer>

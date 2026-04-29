@@ -1,32 +1,48 @@
 /**
- * Mubende Engineering Outreach | Behavioral Logic
- * Orchestrates DOM interactions and scroll-synchronized animations.
+ * Mubende Engineering Outreach | Technical Orchestration
  */
 
 document.addEventListener('DOMContentLoaded', () => {
     'use strict';
 
-    // UI State Management
-    const uiState = {
-        isNavOpen: false,
+    // State Management
+    const state = {
+        theme: localStorage.getItem('theme') || 'dark',
         scrolled: false
     };
 
     /**
-     * Scroll Animation Engine
-     * Utilizes Intersection Observer for performant reveal logic.
+     * Theme Orchestration System
      */
-    const initScrollAnimations = () => {
+    const initTheme = () => {
+        const root = document.documentElement;
+        const toggleBtn = document.getElementById('theme-toggle');
+        
+        // Apply initial state
+        root.setAttribute('data-theme', state.theme);
+
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                state.theme = state.theme === 'dark' ? 'light' : 'dark';
+                root.setAttribute('data-theme', state.theme);
+                localStorage.setItem('theme', state.theme);
+            });
+        }
+    };
+
+    /**
+     * Scroll-Synchronized Reveal Engine
+     */
+    const initScrollReveal = () => {
         const observerOptions = {
-            threshold: 0.15,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.1,
+            rootMargin: '0px 0px -40px 0px'
         };
 
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
-                    // Stop observing once visible to maintain performance
                     revealObserver.unobserve(entry.target);
                 }
             });
@@ -38,58 +54,27 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     /**
-     * Header Dynamic Styling
-     * Monitors scroll position to adjust header visibility/blur.
+     * Navigation Logic
      */
-    const handleHeaderScroll = () => {
+    const handleHeaderState = () => {
         const header = document.querySelector('.site-header');
-        const scrollThreshold = 50;
+        const threshold = 60;
 
         window.addEventListener('scroll', () => {
-            const currentScroll = window.scrollY;
-            
-            if (currentScroll > scrollThreshold && !uiState.scrolled) {
+            if (window.scrollY > threshold && !state.scrolled) {
                 header.classList.add('header-scrolled');
-                uiState.scrolled = true;
-            } else if (currentScroll <= scrollThreshold && uiState.scrolled) {
+                state.scrolled = true;
+            } else if (window.scrollY <= threshold && state.scrolled) {
                 header.classList.remove('header-scrolled');
-                uiState.scrolled = false;
+                state.scrolled = false;
             }
         }, { passive: true });
     };
 
-    /**
-     * Navigation Logic
-     * Handles mobile menu state and fluid link transitions.
-     */
-    const initNavigation = () => {
-        const mobileToggle = document.querySelector('.mobile-toggle');
-        const navLinks = document.querySelector('.nav-links');
+    // Initialize modules
+    initTheme();
+    initScrollReveal();
+    handleHeaderState();
 
-        if (mobileToggle) {
-            mobileToggle.addEventListener('click', () => {
-                uiState.isNavOpen = !uiState.isNavOpen;
-                mobileToggle.classList.toggle('active');
-                navLinks.classList.toggle('active');
-                document.body.style.overflow = uiState.isNavOpen ? 'hidden' : '';
-            });
-        }
-
-        // Close mobile nav on link click
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (uiState.isNavOpen) {
-                    mobileToggle.click();
-                }
-            });
-        });
-    };
-
-    // Initialize core behavioral modules
-    initScrollAnimations();
-    handleHeaderScroll();
-    initNavigation();
-
-    // Console handshake for engineering verification
-    console.log('%c Mubende Engineering Outreach | System Initialized ', 'background: #3b82f6; color: #fff; font-weight: bold;');
+    console.log('%c MEO | System Expansion Synchronized ', 'background: #3b82f6; color: #fff; font-weight: bold;');
 });
